@@ -1,0 +1,20 @@
+<app-header (postButtonClick)="booleanxd = !booleanxd"></app-header>
+<!--"importuju" header (komponentu), emittování, boolean-->
+
+<div id="content">
+<h1 routerLink="">MAXOSTRANA</h1>
+  <app-sidebar *ngIf="!booleanxd"></app-sidebar>
+  <!--"importuju" sidebar (komponentu), když boolean true - sidebar se ukáže-->
+
+<!--<a routerLink="about">O nás</a>
+<a routerLink="contact">Kontakty</a>-->
+
+<!--<input type="search" [(ngModel)]="search">-->
+
+<!-- option - to, co nabízí search -->
+<!--<a *ngFor="let option of getFilteredOptions()" [routerLink]="option.path">{{option.title}}</a>-->
+</div>
+
+
+
+<router-outlet></router-outlet>

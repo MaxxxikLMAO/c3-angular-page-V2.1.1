@@ -1,0 +1,19 @@
+<div id="content">
+  <h2>Kontaktní formlulář</h2>
+
+  <form (ngSubmit)="submitMess()">
+
+    <!-- Search form -->
+    <input class="form-control" type="text" placeholder="Name" aria-label="Search"
+           name="nameBarInputName" type="text" [(ngModel)]="nameBar">
+    <input class="form-control" type="text" placeholder="Email" aria-label="Search"
+           name="emailBarInputName" type="email" [(ngModel)]="emailBar">
+
+    <!--<input name="nameBarInputName" type="text" [(ngModel)]="nameBar">-->
+    <!--<input name="emailBarInputName" type="email" [(ngModel)]="emailBar">-->
+    <textarea placeholder="Your message" name="messageBarInputName" [(ngModel)]="messageBar"></textarea>
+
+    <button id="formButt">S U B M I T</button>
+  </form>
+</div>
+<footer>Website created by: Max Müller</footer>

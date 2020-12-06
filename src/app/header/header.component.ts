@@ -15,8 +15,9 @@ export class HeaderComponent {
   search = ''; // content inputu (search políčka)
   resultStorage: ISearchOption[] = [
     {title: ' home ', path: ''},
-    {title: ' O nás ', path: 'about'},
-    {title: ' Kontaktní formulář ', path: 'contact'},
+    {title: ' o nás ', path: 'about'},
+    {title: ' kontaktní formulář ', path: 'contact'},
+    {title: ' zaregistrujte se ', path: 'user-create'},
   ];
 
 

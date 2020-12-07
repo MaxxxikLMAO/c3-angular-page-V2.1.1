@@ -17,7 +17,7 @@ export class HeaderComponent {
     {title: ' home ', path: ''},
     {title: ' o nás ', path: 'about'},
     {title: ' kontaktní formulář ', path: 'contact'},
-    {title: ' zaregistrujte se ', path: 'user-create'},
+    {title: ' zaregistrujte se ', path: 'user.create'},
   ];
 
 

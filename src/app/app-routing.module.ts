@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'user.create', component: ContactComponent},
+  {path: 'user.create', component: UserCreateComponent},
   {path: 'users', component: UserCreateComponent},
   {path: 'user/:id', component: UserDetailComponent},
 

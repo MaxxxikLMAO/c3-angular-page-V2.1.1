@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, of} from "rxjs";
 
 export interface IUserEntity {
@@ -12,10 +12,13 @@ export interface IUserEntity {
 })
 export class UsersService {
 
-  private id = 0;
-  private users: IUserEntity[] = [];
+  private id = 1;
+  private users: IUserEntity[] = [
+    {id: 69, username: 'XxxKittenSaver911xxXCZE', password: '123'}
+  ];
 
-  constructor() { }
+  constructor() {
+  }
 
   getAllUsers(): Observable<IUserEntity[]> {
     return of(this.users);
@@ -23,8 +26,8 @@ export class UsersService {
 
   getUserById(id: number): Observable<IUserEntity> {
     let user: IUserEntity;
-    for(const u of this.users) {
-      if(id === u.id) {
+    for (const u of this.users) {
+      if (id === u.id) {
         user = u;
         break;
       }
@@ -33,14 +36,19 @@ export class UsersService {
   }
 
   create(newUsername: string, newPassword: string): Observable<IUserEntity> {
-    const newUser: IUserEntity = {id: this.id, username: newUsername, password: newPassword};
+    const newUser: IUserEntity = {id: this.id++, username: newUsername, password: newPassword};
+    this.users.push(newUser);
+    return of(newUser);
+  }
 
-    if(this.users.find(u => u.username === newUsername)) {
-      alert('user already exists!');
-    } else {
-      this.id++;
-      this.users.push(newUser);
-      return of(newUser);
+
+  edit(id: number, username: string): Observable<IUserEntity> {
+    for(const u of this.users) {
+      if(u.id === id) {
+        u.username = username
+        return of(u);
+      }
     }
+    return of(null);
   }
 }

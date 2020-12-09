@@ -1,9 +1,17 @@
 
-  <div id="userinfo">
+<form (ngSubmit)="edit()">
+  <input name="username" [(ngModel)]="username">
+  <button class="btn btn-success">butt</button>
+</form>
+
+<!--<p>{{user?.username}}</p>-->
+
+
+  <!--<div id="userinfo">
     <h1 class="text-center form-text text-primary">Vítejte, {{user.username}}!</h1>
     <label>Vaše id: {{user.id}}</label>
     <br>
     <label>Vaše přihlašovací jméno: {{user.username}}</label>
     <br>
     <label>Vaše heslo: {{user.password}}</label>
-  </div>
+  </div>-->

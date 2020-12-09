@@ -5,6 +5,7 @@ import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
 import {UserDetailComponent} from "./user-detail/user-detail.component";
 import {UserCreateComponent} from "./user-create/user-create.component";
+import {UsersComponent} from "./users/users.component";
 
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'user.create', component: UserCreateComponent},
-  {path: 'users', component: UserCreateComponent},
+  {path: 'users', component: UsersComponent},
   {path: 'user/:id', component: UserDetailComponent},
 
 ];

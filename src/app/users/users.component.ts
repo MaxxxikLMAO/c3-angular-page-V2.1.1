@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {IUserEntity, UsersService} from "../users.service";
+import {Component, OnInit} from '@angular/core';
+import {IUserEntity, UsersService} from '../users.service';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
   users: IUserEntity[] = [];
@@ -15,11 +15,12 @@ export class UsersComponent implements OnInit {
     usersService.getAllUsers()
       .subscribe(
         u => this.users = u,
-        e => console.error
-      )
+        e => console.error(e)
+      );
   }
 
   ngOnInit(): void {
+
   }
 
 }
